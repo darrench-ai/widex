@@ -787,6 +787,7 @@
                     <span class="tag" onclick="selectIssue('pumping')">聲音忽大忽小(Pumping)</span>
                     <span class="tag" onclick="selectIssue('soft_noise')">環境底噪太吵</span>
                     <span class="tag" onclick="selectIssue('music_flat')">🎵 音樂平淡無奇</span>
+                    <span class="tag" onclick="selectIssue('nasal_voice')">🗣️ 講話像感冒(鼻音)</span>
                 </div>
             </div>
 
@@ -815,6 +816,9 @@
                     <span class="tag" onclick="selectIssue('tinnitus')">耳鳴困擾 (Zen)</span>
                     <span class="tag" onclick="selectIssue('itchy_ear')">👂 耳朵癢/過敏</span>
                     <span class="tag" onclick="selectIssue('rain_water')">💧 汗水/下雨保養</span>
+                    <span class="tag" onclick="selectIssue('no_sound')">🔇 完全沒聲音/無反應</span>
+                    <span class="tag" onclick="selectIssue('intermittent')">🔌 聲音斷斷續續</span>
+                    <span class="tag" onclick="selectIssue('not_charging')">🔋 無法充電</span>
                 </div>
             </div>
 
@@ -825,6 +829,7 @@
                     <span class="tag" onclick="selectIssue('tv_music')">電視/音樂效果差</span>
                     <span class="tag" onclick="selectIssue('app_connect')">📶 App/藍牙無法連線</span>
                     <span class="tag" onclick="selectIssue('battery_drain')">🔋 電池耗電異常</span>
+                    <span class="tag" onclick="selectIssue('lost_device')">📍 助聽器遺失(定位)</span>
                 </div>
             </div>
 
@@ -1764,6 +1769,55 @@
                 '使用乾燥的軟布清潔充電盒與助聽器的「金屬接點」。'
             ],
             tip: '若續航力突然大幅下降，可能是電池老化，需回廠更換。'
+        },
+        'nasal_voice': {
+            title: '🗣️ 講話像感冒 / 鼻音很重',
+            tags: ['nasal', 'cold', 'voice', '鼻音', '感冒', '說話'],
+            steps: [
+                '這通常是低頻過度放大的表現。',
+                '在 Fine Tuning 中，稍微降低 250Hz - 500Hz 的 G80 與 G50。'
+            ],
+            tip: '若個案伴隨「覺得聲音很悶」，請同步檢查 Vent 是否太小。'
+        },
+        'no_sound': {
+            title: '🔇 完全沒聲音 / 無反應',
+            tags: ['no sound', 'dead', 'broken', '沒聲音', '壞掉', '無聲'],
+            steps: [
+                '檢查電池是否沒電 / 是否裝反。',
+                '取下耳塞 (Dome) 並檢查 Wax Guard (濾網) 是否被耳垢完全堵死。',
+                '聆聽助聽器開機時是否有啟動音 (開機音樂)。'
+            ],
+            tip: '80% 以上的「完全沒聲音」更換濾網即可解決，並非機器損壞。'
+        },
+        'intermittent': {
+            title: '🔌 聲音斷斷續續',
+            tags: ['intermittent', 'cut', 'drop', '斷續', '接觸不良', '時有時無'],
+            steps: [
+                '檢查電池艙門是否鬆動，或電池接點是否有氧化/髒污。',
+                '若是 RIC 機種，檢查 Receiver 線材是否有折損或接觸不良。',
+                '放入電子除濕盒進行深度乾燥，排除濕氣短路。'
+            ],
+            tip: '可捏住 Receiver 線材輕微晃動，若聲音隨之斷續，則線材已損壞須更換。'
+        },
+        'not_charging': {
+            title: '🔋 無法充電 / 充電燈不亮',
+            tags: ['charge', 'power', 'led', '充電', '燈不亮', '接觸不良'],
+            steps: [
+                '用乾布或棉花棒擦拭助聽器與充電盒的「金屬充電接點」。',
+                '確認助聽器放入充電盒的角度與位置正確 (有磁吸到位)。',
+                '檢查充電線與變壓器是否正常運作。'
+            ],
+            tip: '接點上的微小汗水結冰或氧化層是無法充電的最常見原因。'
+        },
+        'lost_device': {
+            title: '📍 助聽器遺失 / 找不到',
+            tags: ['lost', 'find', 'missing', '遺失', '不見', '丟失', '定位'],
+            steps: [
+                '打開手機的 Widex App (例如 Moment App 或 Magnify App)。',
+                '進入設定選單，尋找「尋找我的助聽器 (Find my hearing aid)」功能。',
+                '查看地圖上最後一次連線的位置。'
+            ],
+            tip: 'App 的尋找功能依賴手機的 GPS，助聽器沒電時只能顯示「最後連線位置」。'
         }
     };
 
